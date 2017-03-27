@@ -526,3 +526,35 @@ footer {
         color: #858585;
         padding: 1em 0;
         letter-spacing: 0.06em; }
+
+
+
+/*    07. Particles
+---------------------------------------------------------*/
+.particles {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    display: block;
+    z-index: -999;
+}
+section#WhatSeoDo img.p1 {
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    left: 2%;
+    top: 10%;
+    transform: rotate(40deg);
+    opacity: .3;
+    transition: all 2s ease-in-out;
+}
+
+section#WhatSeoDo:hover img.p1 {
+    height: 60px;
+    width: 60px;
+    position: absolute;
+    left: 10%;
+    top: 40%;
+    transform: rotate(-50deg);
+    opacity: .3;
+}
