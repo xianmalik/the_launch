@@ -18,7 +18,9 @@ body {
         font-family: 'Roboto Slab', serif;
         font-weight: 300;
         width: 100%;
-        overflow-x: hidden; }
+        overflow-x: hidden;
+        opacity: 0;
+        transition: opacity .3s ease-in; }
 section {
     position: relative; }
 
@@ -105,7 +107,13 @@ header {
         margin: 0;
         border: 0px #FFF; }
         .navbar-default .navbar-nav > li > a,
-        .navbar-default .navbar-nav > li > a:hover {
+        .navbar-default .navbar-nav > li > a:hover,
+        .navbar-default .navbar-nav > li > a:active,
+        .navbar-default .navbar-nav > li > a:focus,
+        .navbar-default .navbar-nav > li.open > a,
+        .navbar-default .navbar-nav > li.open > a:hover,
+        .navbar-default .navbar-nav > li.open > a:active,
+        .navbar-default .navbar-nav > li.open > a:focus {
             background-color: transparent;
             color: #020000; }
         .navbar-default .navbar-nav > .active > a,
@@ -123,13 +131,19 @@ header {
             transition: all .15s ease-in-out;
             background: #E71A24; }
         .navbar-default .navbar-nav > li > a:hover:before,
+        .navbar-default .navbar-nav > .open > a:before,
         .navbar-default .navbar-nav > .active > a:before {
             right: 15.5px;
             height: 1.5em; }
 
+        .dropdown-menu li {
+            display: block;
+            width: 100%; }
+
     div#Slider {
         width: 100%;
         height: calc(100vh - 82px);
+        margin-top: 82px;
         position: relative;
         display: block;
         background-image: url('img/slider-bg.jpg');
@@ -153,7 +167,7 @@ header {
             position: absolute;
             height: 100%;
             top: 0;
-            right: 0; }
+            right: -3%; }
             div#Slider .slider-right .slider-h {
                 font-family: 'Roboto', sans-serif;
                 line-height: .8em;
@@ -166,11 +180,14 @@ body.about div#Slider {
     background-image: url('img/about-bg.jpg');
     background-size: cover; }
     body.about div#Slider .slider-left {
-        transform: skewX(-20deg);
         width: 60%;
-        margin-left: -10%;
         padding: 10%;
+        margin-left: -10%;
+        transform: translateX(-50vw) skewX(-20deg);
+        transition: transform 1s cubic-bezier(0, 1, 1, 1);
         background-color: rgba(231, 26, 36, .85); }
+    body.about.active div#Slider .slider-left {
+        transform: skewX(-20deg); }
         body.about div#Slider .slider-left .slider-h {
             font-family: 'Roboto', sans-serif;
             line-height: .8em;
@@ -192,16 +209,24 @@ body.service div#Slider {
     background-size: cover;
     color: #FFF; }
     body.service div#Slider .slider-left {
-        transform: skewX(-20deg);
         width: 55%;
         margin-left: -10%;
         padding: 0 20%;
-        transform: skewX(-20deg);
+        transform: translateX(-50vw) skewX(-20deg);
+        transition: transform 1s cubic-bezier(0, 1, 1, 1);
         background-color: rgba(231, 26, 36, .85); }
+    body.service.active div#Slider .slider-left {
+        transform: skewX(-20deg); }
         body.service div#Slider .slider-left img {
-            transform: skewX(20deg); }
+            transform: translateX(0) skewX(20deg); }
     body.service div#Slider .slider-right {
         width: 55%; }
+        .slider-h span {
+            transition: opacity .1s ease-in;
+            float: left; }
+        .about .slider-h > span {
+            transition: opacity .1s ease-in;
+            float: right; }
     body.service div#Slider h1 {
         font-size: 90px; }
     body.service div#Slider h1,
@@ -538,23 +563,30 @@ footer {
     display: block;
     z-index: -999;
 }
-section#WhatSeoDo img.p1 {
-    height: 50px;
-    width: 50px;
-    position: absolute;
+.particles img.p1 {
+    height: 20px;
+    width: 20px;
+    position: fixed;
     left: 2%;
     top: 10%;
-    transform: rotate(40deg);
     opacity: .3;
-    transition: all 2s ease-in-out;
+    animation: particle_anim_1 40s infinite alternate ease-in-out;
 }
-
-section#WhatSeoDo:hover img.p1 {
-    height: 60px;
-    width: 60px;
-    position: absolute;
-    left: 10%;
-    top: 40%;
-    transform: rotate(-50deg);
+.particles img.p2 {
+    height: 50px;
+    width: 50px;
+    position: fixed;
+    right: 2%;
+    bottom: 10%;
     opacity: .3;
+    animation: particle_anim_2 30s infinite alternate ease-in-out;
+}
+@keyframes particle_anim_1 {
+    0%   { transform: translate(0, 0) scale(1) rotate(0deg); }
+    50%  { transform: translate(50vw, 40vh) scale(2) rotate(-1800deg); }
+    100% { transform: translate(0, 80vh) scale(1) rotate(-3600deg); }
+}
+@keyframes particle_anim_2 {
+    0%   { transform: translate(0, 0) scale(1) rotate(0deg); }
+    100% { transform: translate(-40vw, -80vh) scale(1) rotate(360deg); }
 }
