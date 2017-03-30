@@ -107,7 +107,9 @@ header {
         padding: 16px 0;
         margin: 0;
         border: 0px #FFF; }
-        .navbar-default .navbar-nav > li > a,
+        .navbar-default .navbar-nav > li > a {
+            background-color: transparent;
+            color: #020000; }
         .navbar-default .navbar-nav > li > a:hover,
         .navbar-default .navbar-nav > li > a:active,
         .navbar-default .navbar-nav > li > a:focus,
@@ -116,10 +118,12 @@ header {
         .navbar-default .navbar-nav > li.open > a:active,
         .navbar-default .navbar-nav > li.open > a:focus {
             background-color: transparent;
+            font-weight: 700;
             color: #020000; }
         .navbar-default .navbar-nav > .active > a,
         .navbar-default .navbar-nav > .active > a:hover {
             background: transparent;
+            font-weight: 700;
             color: #E71A24; }
         .navbar-default .navbar-nav > li > a:before {
             content: '';
@@ -241,6 +245,10 @@ body.service div#Slider {
 ---------------------------------------------------------*/
 section#WhatWeDo {
     padding: 150px 0 0 0; }
+    section#WhatWeDo a {
+        color: #000; }
+        section#WhatWeDo a:hover {
+            color: #E71A24; }
     section#WhatWeDo .do-icons img {
         height: 100px;
         width: auto;
@@ -405,7 +413,8 @@ section#Approach {
     background: url('img/approach-bg.png') no-repeat;
     background-position: bottom; }
     section#Approach .col-md-10 .row {
-        margin: 8em auto 17em; }
+        height: 31em;
+        margin: 5.5em auto; }
         section#Approach .col-md-10 .row .col-md-9 {
             margin-top: 2em; }
     section#Approach .col-md-10 .row:last-child {
@@ -413,12 +422,19 @@ section#Approach {
     .software section#Approach .col-md-10 .row {
         height: 37.5em;
         margin: auto; }
+        .software section#Approach .col-md-10 .row:first-child {
+            margin-bottom: -6em; }
     .website section#Approach .col-md-10 .row {
         height: 37.5em;
         margin: auto; }
-    section#Approach .col-md-10 .row:first-child {
-        height: 31em;
-        margin-top: 12em; }
+        .website section#Approach .col-md-10 .row:first-child {
+            margin-top: 5em; }
+    .social section#Approach .col-md-10 .row {
+        margin: 0 auto 5.5em; }
+        .social section#Approach .col-md-10 .row:first-child {
+            margin-bottom: 0em; }
+    .seo section#Approach .col-md-10 .row:first-child {
+        margin-top: 7em; }
     section#Approach .col-md-10 .row:last-child {
         height: auto; }
 
@@ -632,8 +648,7 @@ footer {
     top: 0;
     height: 100%;
     width: 100%;
-    z-index: -999999;
-    opacity: .2; }
+    z-index: -999999; }
     .background span {
         color: #E71A24;
         font-size: 150vh;
