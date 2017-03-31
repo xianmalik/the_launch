@@ -23,6 +23,7 @@ body {
         transition: opacity .3s ease-in; }
         body .main-wrapper,
         body .main-wrapper > section {
+            z-index: 3;
             position: relative; }
 
 p {
@@ -76,31 +77,51 @@ blockquote {
     padding: 0;
     display: block;
     margin-top: 1em;
-    font-size: 20px; }
-    blockquote span {
+    font-size: 20px;
+    overflow: hidden; }
+    blockquote a {
         position: relative;
         display: inline-block;
         /*transition: all .3s ease-out;*/
-        padding: .5em; }
-    blockquote span:hover {
-        color: #FFF;
-        font-weight: bold; }
-        blockquote span::before {
+        padding: .5em;
+        color: #020000;
+        transition: all .3s ease-out; }
+    blockquote a:hover {
+        color: #FFF; }
+        blockquote a::before {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
-            width: 0;
+            width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, #E71A24, #FFF);
-            /*transition: width .3s ease-out;*/
+            background: #E71A24;
+            transform: translateX(-100%);
+            transition: all .3s ease-out;
             z-index: -1; }
-        blockquote span:hover::before {
-            width: 100%; }
+        blockquote a:hover::before {
+            transform: translateX(0); }
+
+a.hover-anim::before {
+    content: '';
+    position: absolute;
+    right: -1em;
+    top: calc(50% - .8em);
+    height: 0;
+    width: 2px;
+    transform: rotate(20deg);
+    transition: all .15s ease-in-out;
+    background: #E71A24; }
+    a.hover-anim:hover::before {
+        right: 0;
+        height: 2em; }
+
 
 /*    02. HEADER
 ---------------------------------------------------------*/
 header {
+    z-index: 5;
+    position: relative;
     min-height: 100%; }
     nav.navbar.navbar-default {
         background: #FFF;
@@ -125,25 +146,29 @@ header {
             background: transparent;
             font-weight: 700;
             color: #E71A24; }
+        a.hover-anim {
+            position: relative; }
         .navbar-default .navbar-nav > li > a:before {
             content: '';
             position: absolute;
             right: 8px;
             top: calc(50% - .6em);
             height: 0;
-            width: .5px;
+            width: 1px;
             transform: rotate(20deg);
             transition: all .15s ease-in-out;
             background: #E71A24; }
         .navbar-default .navbar-nav > li > a:hover:before,
         .navbar-default .navbar-nav > .open > a:before,
         .navbar-default .navbar-nav > .active > a:before {
-            right: 15.5px;
+            right: 1em;
             height: 1.5em; }
 
-        .dropdown-menu li {
-            display: block;
-            width: 100%; }
+        .dropdown-menu {
+            border-radius: 5px !important; }
+            .dropdown-menu li {
+                display: block;
+                width: 100%; }
 
     div#Slider {
         width: 100%;
@@ -369,20 +394,20 @@ section#KeyPoints {
             section#KeyPoints .key-point.kp-1:before {
                 background-image: url('img/kp-1.jpg');
                 background-position: 40% 65%;
+                filter: brightness(80%);
                 clip-path: polygon(0 0,100% 0,50% 100%);
-                transform: translate(-15%, 20%) rotateZ(20deg);
-                filter: brightness(80%); }
+                transform: translate(-15%, 20%) rotateZ(20deg) scale(1.05); }
             section#KeyPoints .key-point.kp-2:before {
                 background-image: url('img/kp-2.jpg');
                 background-position: 40% 65%;
                 clip-path: polygon(0 0,100% 0,50% 100%);
-                transform: translate(10%, 20%) rotateZ(-20deg); }
+                transform: translate(10%, 20%) rotateZ(-20deg) scale(1.05); }
             section#KeyPoints .key-point.kp-3:before {
                 background-image: url('img/kp-3.jpg');
                 background-size: cover;
                 background-position: 40% 65%;
                 clip-path: polygon(0 0,100% 0,50% 100%);
-                transform: translate(-5%, -10%) rotateZ(170deg); }
+                transform: translate(-5%, -10%) rotateZ(170deg) scale(1.05); }
                 section#KeyPoints .key-point.kp-1 .wrap {
                     padding: 0 35% 0 18%; }
                 section#KeyPoints .key-point.kp-2 .wrap {
@@ -409,9 +434,6 @@ section#Approach {
     padding: 100px 0 280px; }
 body.website section#Approach {
     padding: 100px 0 0; }
-section#Approach {
-    background: url('img/approach-bg.png') no-repeat;
-    background-position: bottom; }
     section#Approach .col-md-10 .row {
         height: 31em;
         margin: 5.5em auto; }
@@ -423,6 +445,7 @@ section#Approach {
         height: 37.5em;
         margin: auto; }
         .software section#Approach .col-md-10 .row:first-child {
+            margin-top: 11em;
             margin-bottom: -6em; }
     .website section#Approach .col-md-10 .row {
         height: 37.5em;
@@ -432,6 +455,7 @@ section#Approach {
     .social section#Approach .col-md-10 .row {
         margin: 0 auto 5.5em; }
         .social section#Approach .col-md-10 .row:first-child {
+            margin-top: 12em;
             margin-bottom: 0em; }
     .seo section#Approach .col-md-10 .row:first-child {
         margin-top: 7em; }
@@ -525,11 +549,16 @@ body.service.software .case-study-content-holder {
 
 section#WebPoints {
     padding: 150px 0px; }
+    #WebPoints .col-md-6 {
+        margin-top: 3em; }
+        #WebPoints .col-md-6 img {
+        margin: 20px 0; }
 
 /*    06. Ready
 ---------------------------------------------------------*/
 section#Ready {
     padding: 25em 0;
+    z-index: 1;
     color: #FFFFFF;
     background: url('img/ready-bg.png') 50% 0 no-repeat;
     background-size: cover; }
@@ -537,13 +566,32 @@ section#Ready {
         padding: 1em 3.5em;
         font-size: 20px;
         display: inline-block;
+        position: relative;
+        overflow: hidden;
         color: #FFFFFF;
         border: 1px solid #FFFFFF; }
+        section#Ready a.ready-btn:hover {
+            color: #E71A24; }
+        section#Ready a.ready-btn::after {
+            content: '';
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: #FFF;
+            z-index: -1;
+            transition: all 1s cubic-bezier(0, 1, 1, 1);
+            transform: translateX(-100%); }
+            section#Ready a.ready-btn:hover::after {
+                transform: none; }
 
 
 /*    07. Footer
 ---------------------------------------------------------*/
 footer {
+    z-index: 4;
+    position: relative;
     background: #020001; }
     footer .footer-widgets {
         padding: 60px 0;
@@ -574,6 +622,7 @@ footer {
 /*    07. Particles
 ---------------------------------------------------------*/
 .particles {
+    pointer-events: none;
     height: 100%;
     width: 100%;
     position: absolute;
@@ -612,6 +661,7 @@ footer {
     width: 250px;
     left: -10%;
     top: 45%;
+    opacity: .05;
     animation: particle_anim_3 10s infinite alternate-reverse ease-in-out;
 }
 .particles img.p5 {
@@ -619,6 +669,7 @@ footer {
     width: 250px;
     right: -10%;
     top: 45%;
+    opacity: .05;
     animation: particle_anim_3 10s infinite alternate ease-in-out;
 }
 .particles img.p6 {
@@ -627,6 +678,34 @@ footer {
     left: -5%;
     top: 35%;
     animation: particle_anim_3 15s infinite alternate ease-in-out;
+}
+.particles img.p7 {
+    height: 25px;
+    width: 25px;
+    left: 30%;
+    top: 45%;
+    animation: particle_anim_3 15s infinite alternate ease-in-out;
+}
+.particles img.p8 {
+    height: 30px;
+    width: 30px;
+    right: 10%;
+    top: 20%;
+    animation: particle_anim_1 50s infinite alternate ease-in-out;
+}
+.particles img.p9 {
+    height: 15px;
+    width: 15px;
+    left: 40%;
+    top: 30%;
+    animation: particle_anim_1 50s infinite ease-in-out;
+}
+.particles img.p10 {
+    height: 40px;
+    width: 40px;
+    left: 5%;
+    top: 80%;
+    animation: particle_anim_2 30s infinite alternate ease-in-out;
 }
 @keyframes particle_anim_1 {
     0%   { transform: translate(0, 0) scale(1) rotate(0deg); }
@@ -644,15 +723,14 @@ footer {
 
 
 .background {
+    pointer-events: none;
     position: absolute;
+    display: flex;
+    align-items: flex-end;
     top: 0;
     height: 100%;
     width: 100%;
-    z-index: -999999; }
-    .background span {
-        color: #E71A24;
-        font-size: 150vh;
-        line-height: .7em;
-        font-family: 'Roboto', serif;
-        display: block;
-        width: 100%; }
+    z-index: 2; }
+    .background img {
+        width: 100%;
+        margin-bottom: -40px; }

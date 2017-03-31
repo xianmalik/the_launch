@@ -1,4 +1,15 @@
 jQuery(document).ready(function($){
+    if( $(window).width() > 768 ){
+        $('ul.nav li a.dropdown-toggle').parent().hover(function() {
+          $(this).parent().find('.dropdown-menu').stop(true, true).fadeIn(300);
+        }, function() {
+          $(this).parent().find('.dropdown-menu').stop(true, true).fadeOut(300);
+        });
+    } else {
+        $('body.service #Approach .col-md-10 .row .col-md-3').queue(function(){
+            $(this).prependTo( $(this).parent() ).dequeue();
+        });
+    }
     $(window).load(function(){
         $("body").css('opacity', 1).addClass('active');
         var elem = $('#Slider .slider-h span:first-child');
@@ -11,11 +22,18 @@ jQuery(document).ready(function($){
     var owl = $(".owl-carousel");
     $(".owl-carousel").owlCarousel({
         center: true,
-        items: 3,
         nav: true,
         navText: ["<img src='img/arrow-previous.svg'>","<img src='img/arrow-next.svg'>"],
         loop: true,
-        dots: false
+        dots: false,
+        responsive: {
+            0: {
+                items: 1,
+            },
+            768: {
+                items: 3,
+            }
+        }
     });
     $('<div class="owlnumber">1</div>').insertAfter(".owl-prev");
     owl.on('changed.owl.carousel',function(property){
