@@ -23,16 +23,12 @@ jQuery(document).ready(function($){
     $(".owl-carousel").owlCarousel({
         center: true,
         nav: true,
-        navText: ["<img src='img/arrow-previous.svg'>","<img src='img/arrow-next.svg'>"],
+        navText: ["<img src='http://thelaunch.co/img/arrow-previous.svg'>","<img src='http://thelaunch.co/img/arrow-next.svg'>"],
         loop: true,
         dots: false,
         responsive: {
-            0: {
-                items: 1,
-            },
-            768: {
-                items: 3,
-            }
+            0:   { items: 1 },
+            768: { items: 3 }
         }
     });
     $('<div class="owlnumber">1</div>').insertAfter(".owl-prev");
@@ -42,5 +38,15 @@ jQuery(document).ready(function($){
         else if (el==6) el=1;
         else el=el-2;
         $(".owlnumber").html(el);
+    });
+    $('section#CaseStudy .owl-item a.btn-default').click(function(e) {
+        e.preventDefault();
+        var data = $(this).attr('data-study');
+        $(".case-study-content").stop(true, true).slideUp();
+        $("#" + data).stop(true, true).slideDown();
+    });
+    $(".button-close").click(function(e){
+        e.preventDefault();
+        $(this).parent().slideUp();
     });
 });

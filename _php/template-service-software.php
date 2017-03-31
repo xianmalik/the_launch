@@ -181,38 +181,64 @@
             </div>
         </section>
 
+
         <section id="CaseStudy">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <div class="owl-carousel  owl-theme">
+                        <div class="owl-carousel owl-theme">
                             <div class="text-center">
                                 <img src="http://thelaunch.co/img/case-study-1.png">
                                 <h6 class="strong">Go-Rilla, Case Study <br>
                                 cillum dolore eu fugiat nulla pariat</h6>
                                 <h6>John Doe, CEO of Nor Corp.</h6>
+                                <a href="#" class="btn-default" data-study="study_1">Show Study</a>
                             </div>
                             <div class="text-center">
                                 <img src="http://thelaunch.co/img/case-study-2.png">
                                 <h6 class="strong">Go-Rilla, Case Study <br>
                                 cillum dolore eu fugiat nulla pariat</h6>
                                 <h6>John Doe, CEO of Nor Corp.</h6>
+                                <a href="#" class="btn-default" data-study="study_2">Show Study</a>
                             </div>
                             <div class="text-center">
                                 <img src="http://thelaunch.co/img/case-study-3.png">
                                 <h6 class="strong">Go-Rilla, Case Study <br>
                                 cillum dolore eu fugiat nulla pariat</h6>
                                 <h6>John Doe, CEO of Nor Corp.</h6>
+                                <a href="#" class="btn-default" data-study="study_2">Show Study</a>
                             </div>
                         </div>
                         <div class="case-study-content-holder">
-                            <h6 class="strong">Go-Rilla</h6>
-                            <p>
-                            <img src="http://thelaunch.co/img/case-study desc.png" class="right">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                            </p>
-                            <div class="button-close">
-                                <a href="#">Close</a>
+                            <div class="case-study-content" id="study_1">
+                                <h6 class="strong">Go-Rilla</h6>
+                                <p>
+                                <img src="http://thelaunch.co/img/case-study-desc.png" class="right">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                </p>
+                                <div class="button-close">
+                                    <a href="#">Close</a>
+                                </div>
+                            </div>
+                            <div class="case-study-content" id="study_2">
+                                <h6 class="strong">Go-Rilla</h6>
+                                <p>
+                                <img src="http://thelaunch.co/img/case-study-desc.png" class="right">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                </p>
+                                <div class="button-close">
+                                    <a href="#">Close</a>
+                                </div>
+                            </div>
+                            <div class="case-study-content" id="study_3">
+                                <h6 class="strong">Go-Rilla</h6>
+                                <p>
+                                <img src="http://thelaunch.co/img/case-study-desc.png" class="right">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                </p>
+                                <div class="button-close">
+                                    <a href="#">Close</a>
+                                </div>
                             </div>
                         </div>
                     </div>
