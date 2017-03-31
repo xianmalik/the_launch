@@ -1,0 +1,736 @@
+/*    01. Color Codes
+    -------------------
+    Black       = #020000
+    Red         = #E71A24
+    GRADIANT    = #FFFFFF, #E71A24
+
+      02. Fonts
+    -------------------
+    font-family: 'Roboto Slab', serif;
+    font-family: 'Roboto', sans-serif;
+---------------------------------------------------------*/
+
+
+html,
+body {
+    height: 100%; }
+    body {
+        font-family: 'Roboto Slab', serif;
+        font-weight: 300;
+        width: 100%;
+        overflow-x: hidden;
+        opacity: 0;
+        transition: opacity .3s ease-in; }
+        body .main-wrapper,
+        body .main-wrapper > section {
+            z-index: 3;
+            position: relative; }
+
+p {
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 1.8em; }
+    p.condense-line {
+        line-height: 1.2em; }
+h1 {
+    font-size: 100px;
+    font-weight: 700; }
+h2 {
+    font-size: 60px;
+    font-weight: 700;
+    margin-bottom: .8em; }
+h3 {
+    font-size: 36px;
+    font-weight: 700; }
+h5 {
+    font-size: 30px;
+    font-weight: 700; }
+h6 {
+    font-size: 18px; }
+a,
+a:hover,
+a:focus,
+a:active {
+    text-decoration: none; }
+b,
+strong,
+.strong {
+    font-weight: 700; }
+.xsmall {
+    font-size: 60%; }
+.themecolor {
+    color: #E71A24; }
+.themebg {
+    color: #FFFFFF;
+    background-color: #E71A24; }
+span.themebg {
+    padding: 0 10px; }
+img.scale-with-grid {
+    width: 100%; }
+.left {
+    float: left; }
+.right {
+    float: right; }
+blockquote {
+    border-left: 3px solid #E71A24;
+    position: relative;
+    padding: 0;
+    display: block;
+    margin-top: 1em;
+    font-size: 20px;
+    overflow: hidden; }
+    blockquote a {
+        position: relative;
+        display: inline-block;
+        /*transition: all .3s ease-out;*/
+        padding: .5em;
+        color: #020000;
+        transition: all .3s ease-out; }
+    blockquote a:hover {
+        color: #FFF; }
+        blockquote a::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #E71A24;
+            transform: translateX(-100%);
+            transition: all .3s ease-out;
+            z-index: -1; }
+        blockquote a:hover::before {
+            transform: translateX(0); }
+
+a.hover-anim::before {
+    content: '';
+    position: absolute;
+    right: -1em;
+    top: calc(50% - .8em);
+    height: 0;
+    width: 2px;
+    transform: rotate(20deg);
+    transition: all .15s ease-in-out;
+    background: #E71A24; }
+    a.hover-anim:hover::before {
+        right: 0;
+        height: 2em; }
+
+
+/*    02. HEADER
+---------------------------------------------------------*/
+header {
+    z-index: 5;
+    position: relative;
+    min-height: 100%; }
+    nav.navbar.navbar-default {
+        background: #FFF;
+        padding: 16px 0;
+        margin: 0;
+        border: 0px #FFF; }
+        .navbar-default .navbar-nav > li > a {
+            background-color: transparent;
+            color: #020000; }
+        .navbar-default .navbar-nav > li > a:hover,
+        .navbar-default .navbar-nav > li > a:active,
+        .navbar-default .navbar-nav > li > a:focus,
+        .navbar-default .navbar-nav > li.open > a,
+        .navbar-default .navbar-nav > li.open > a:hover,
+        .navbar-default .navbar-nav > li.open > a:active,
+        .navbar-default .navbar-nav > li.open > a:focus {
+            background-color: transparent;
+            font-weight: 700;
+            color: #020000; }
+        .navbar-default .navbar-nav > .active > a,
+        .navbar-default .navbar-nav > .active > a:hover {
+            background: transparent;
+            font-weight: 700;
+            color: #E71A24; }
+        a.hover-anim {
+            position: relative; }
+        .navbar-default .navbar-nav > li > a:before {
+            content: '';
+            position: absolute;
+            right: 8px;
+            top: calc(50% - .6em);
+            height: 0;
+            width: 1px;
+            transform: rotate(20deg);
+            transition: all .15s ease-in-out;
+            background: #E71A24; }
+        .navbar-default .navbar-nav > li > a:hover:before,
+        .navbar-default .navbar-nav > .open > a:before,
+        .navbar-default .navbar-nav > .active > a:before {
+            right: 1em;
+            height: 1.5em; }
+
+        .dropdown-menu {
+            border-radius: 5px !important; }
+            .dropdown-menu li {
+                display: block;
+                width: 100%; }
+
+    div#Slider {
+        width: 100%;
+        height: calc(100vh - 82px);
+        margin: 82px 0 -82px;
+        position: relative;
+        display: block;
+        background-image: url('http://thelaunch.co/img/slider-bg.jpg');
+        overflow-x: hidden; }
+        div#Slider .slider-left,
+        div#Slider .slider-right {
+            float: left;
+            height: 100%; }
+        div#Slider .slider-left {
+            display: flex;
+            align-items: center;
+            width: 40%; }
+            div#Slider .slider-left img {
+                margin: auto 20% auto auto; }
+        div#Slider .slider-right {
+            display: flex;
+            align-items: center;
+            width: 60%;
+            padding: 0 0 0 100px; }
+            div#Slider .slider-right .slider-bg {
+            position: absolute;
+            height: 100%;
+            top: 0;
+            right: -3%; }
+            div#Slider .slider-right .slider-h {
+                font-family: 'Roboto', sans-serif;
+                line-height: .8em;
+                margin: 0;
+                color: #FFF;
+                transform: skewX(-20deg); }
+
+
+body.about div#Slider {
+    background-image: url('http://thelaunch.co/img/about-bg.jpg');
+    background-size: cover; }
+    body.about div#Slider .slider-left {
+        width: 60%;
+        padding: 10%;
+        margin-left: -10%;
+        transform: translateX(-50vw) skewX(-20deg);
+        transition: transform 1s cubic-bezier(0, 1, 1, 1);
+        background-color: rgba(231, 26, 36, .85); }
+    body.about.active div#Slider .slider-left {
+        transform: skewX(-20deg); }
+        body.about div#Slider .slider-left .slider-h {
+            font-family: 'Roboto', sans-serif;
+            line-height: .8em;
+            color: #FFF;
+            display: block;
+            width: 100%;
+            margin: 0; }
+
+
+body.service.seo div#Slider {
+    background-image: url('http://thelaunch.co/img/service-seo-bg.jpg'); }
+body.service.social div#Slider {
+    background-image: url('http://thelaunch.co/img/service-social-bg.jpg'); }
+body.service.software div#Slider {
+    background-image: url('http://thelaunch.co/img/service-software-bg.jpg'); }
+body.service.website div#Slider {
+    background-image: url('http://thelaunch.co/img/service-website-bg.jpg'); }
+body.service div#Slider {
+    background-size: cover;
+    color: #FFF; }
+    body.service div#Slider .slider-left {
+        width: 55%;
+        margin-left: -10%;
+        padding: 0 20%;
+        transform: translateX(-50vw) skewX(-20deg);
+        transition: transform 1s cubic-bezier(0, 1, 1, 1);
+        background-color: rgba(231, 26, 36, .85); }
+    body.service.active div#Slider .slider-left {
+        transform: skewX(-20deg); }
+        body.service div#Slider .slider-left img {
+            transform: translateX(0) skewX(20deg); }
+    body.service div#Slider .slider-right {
+        width: 55%; }
+        .slider-h span {
+            transition: opacity .1s ease-in;
+            float: left; }
+        .about .slider-h > span {
+            transition: opacity .1s ease-in;
+            float: right; }
+    body.service div#Slider h1 {
+        font-size: 90px; }
+    body.service div#Slider h1,
+    body.service div#Slider h6 {
+        margin: 0;
+        font-family: 'Roboto', sans-serif;
+        line-height: .8em; }
+
+
+/*    03. What We Do
+---------------------------------------------------------*/
+section#WhatWeDo {
+    padding: 150px 0 0 0; }
+    section#WhatWeDo a {
+        color: #000; }
+        section#WhatWeDo a:hover {
+            color: #E71A24; }
+    section#WhatWeDo .do-icons img {
+        height: 100px;
+        width: auto;
+        margin: 10px; }
+
+
+/*    04. Metrics
+---------------------------------------------------------*/
+section#Metrics {
+    color: #FFF; }
+    .home-metrics {
+        display: flex;
+        align-items: center;
+        position: relative;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center; }
+        .home-metrics.hm-bg-1 {
+            background-image: url("http://thelaunch.co/img/home-metrics-bg-1.jpg"); }
+        .home-metrics.hm-bg-2 {
+            background-image: url("http://thelaunch.co/img/home-metrics-bg-2.jpg"); }
+        .home-metrics.hm-bg-3 {
+            background-image: url("http://thelaunch.co/img/home-metrics-bg-3.jpg"); }
+        .home-metrics.hm-bg-4 {
+            background-image: url("http://thelaunch.co/img/home-metrics-bg-4.jpg"); }
+    .home-metrics:before {
+        content: '';
+        background: linear-gradient(90deg, #E71A24, #FFF);
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        opacity: .5; }
+        .home-metrics.hm-bg-1:before {
+            width: 06.99166666666667%; }
+        .home-metrics.hm-bg-2:before {
+            width: 91.66666666666667%; }
+        .home-metrics.hm-bg-3:before {
+            width: 39.58333333333333%; }
+        .home-metrics.hm-bg-4:before {
+            width: 08.33333333333333%; }
+
+/*    05. Testimonial
+---------------------------------------------------------*/
+section#Testimonial {
+    padding: 150px 0 0; }
+    .test-avatar {
+        width: 90%;
+        margin: 20px auto 30px; }
+    .test-desc {
+        margin-bottom: 1.2em; }
+
+.owl-carousel .owl-item {
+    opacity: .3;
+    transition: opacity .3s ease-in-out; }
+    .owl-carousel .owl-item.center {
+        opacity: 1; }
+    .owl-nav {
+        display: block !important; }
+    .owl-nav > div {
+        background: transparent !important;
+        display: inline-block;
+        color: #020000;
+        font-size: 18px;
+        font-weight: 700;
+        padding: 2em 1em 3em; }
+        .owlnumber {
+            transform: translateY(3px);
+        }
+.software .owl-carousel .owl-item {
+    padding: 20px; }
+.software .owl-carousel .owl-nav {
+    text-align: right; }
+
+
+
+/*    07. About - We Are The Launch
+---------------------------------------------------------*/
+
+section#WeAre {
+    background-image: url('http://thelaunch.co/img/about-shape-1.png');
+    background-size: contain;
+    background-position: 120% top;
+    background-repeat: no-repeat;
+    padding: 100px 0; }
+
+
+/*    07. About - Key Points
+---------------------------------------------------------*/
+section#KeyPoints {
+    padding: 0 0 200px; }
+    section#KeyPoints .key-point {
+        width: 60vw;
+        height: 52vw;
+        margin-left: 2.5%;
+        margin-right: 0;
+        color: #FFF;
+        position: relative;
+        display: flex;
+        align-items: center; }
+        section#KeyPoints .key-point:before {
+            content: '';
+            width: 110%;
+            height: 110%;
+            position: absolute;
+            left: -5%;
+            top: -5%;
+            background-repeat: no-repeat;
+            z-index: -1;  }
+            /*section#KeyPoints .key-point.kp-1 {
+                padding: 12.5% 15% 30% 10%; }*/
+            section#KeyPoints .key-point.kp-2 {
+                margin-top: -18vw;
+                margin-left: auto; }
+            section#KeyPoints .key-point.kp-3 {
+                margin-top: -16vw;
+                margin-left: 5%; }
+            section#KeyPoints .key-point.kp-1:before {
+                background-image: url('http://thelaunch.co/img/kp-1.jpg');
+                background-position: 40% 65%;
+                filter: brightness(80%);
+                clip-path: polygon(0 0,100% 0,50% 100%);
+                transform: translate(-15%, 20%) rotateZ(20deg) scale(1.05); }
+            section#KeyPoints .key-point.kp-2:before {
+                background-image: url('http://thelaunch.co/img/kp-2.jpg');
+                background-position: 40% 65%;
+                clip-path: polygon(0 0,100% 0,50% 100%);
+                transform: translate(10%, 20%) rotateZ(-20deg) scale(1.05); }
+            section#KeyPoints .key-point.kp-3:before {
+                background-image: url('http://thelaunch.co/img/kp-3.jpg');
+                background-size: cover;
+                background-position: 40% 65%;
+                clip-path: polygon(0 0,100% 0,50% 100%);
+                transform: translate(-5%, -10%) rotateZ(170deg) scale(1.05); }
+                section#KeyPoints .key-point.kp-1 .wrap {
+                    padding: 0 35% 0 18%; }
+                section#KeyPoints .key-point.kp-2 .wrap {
+                    padding: 0 15% 0 30%; }
+                section#KeyPoints .key-point.kp-3 .wrap {
+                    padding: 0 15% 0 25%; }
+
+/*    07. About - ReImagine
+---------------------------------------------------------*/
+section#ReImagine {
+    background: url('http://thelaunch.co/img/reimagine-bg.png') 0 0 no-repeat;
+    background-size: contain;
+    padding: 150px 0;
+}
+section#CEO {
+    padding: 150px 0;
+}
+
+/*    07. Service - SEO
+---------------------------------------------------------*/
+section#WhatSeoDo {
+    padding: 100px 0; }
+section#Approach {
+    padding: 100px 0 280px; }
+body.website section#Approach {
+    padding: 100px 0 0; }
+    section#Approach .col-md-10 .row {
+        height: 31em;
+        margin: 5.5em auto; }
+        section#Approach .col-md-10 .row .col-md-9 {
+            margin-top: 2em; }
+    section#Approach .col-md-10 .row:last-child {
+        margin-bottom: 0; }
+    .software section#Approach .col-md-10 .row {
+        height: 37.5em;
+        margin: auto; }
+        .software section#Approach .col-md-10 .row:first-child {
+            margin-top: 11em;
+            margin-bottom: -6em; }
+    .website section#Approach .col-md-10 .row {
+        height: 37.5em;
+        margin: auto; }
+        .website section#Approach .col-md-10 .row:first-child {
+            margin-top: 5em; }
+    .social section#Approach .col-md-10 .row {
+        margin: 0 auto 5.5em; }
+        .social section#Approach .col-md-10 .row:first-child {
+            margin-top: 12em;
+            margin-bottom: 0em; }
+    .seo section#Approach .col-md-10 .row:first-child {
+        margin-top: 7em; }
+    section#Approach .col-md-10 .row:last-child {
+        height: auto; }
+
+.software section#Approach,
+.website section#Approach {
+    background: none; }
+
+
+
+body.service section#Metrics {
+    margin-bottom: 150px;
+    color: #FFF; }
+.seo-metrics {
+    display: flex;
+    align-items: center;
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; }
+    .seo-metrics.seom-bg-1 {
+        background-image: url("http://thelaunch.co/img/seo-metrics-1.jpg"); }
+    .seo-metrics.seom-bg-2 {
+        background-image: url("http://thelaunch.co/img/seo-metrics-2.jpg"); }
+    .seo-metrics.seom-bg-3 {
+        background-image: url("http://thelaunch.co/img/seo-metrics-3.jpg"); }
+.seo-metrics:before {
+    content: '';
+    background: linear-gradient(90deg, #E71A24, #FFF);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    opacity: .5; }
+    .seo-metrics.seom-bg-1:before {
+        width: 90.90909090909091%; }
+    .seo-metrics.seom-bg-2:before {
+        width: 37.27272727272727%; }
+    .seo-metrics.seom-bg-3:before {
+        width: 15.90909090909091%; }
+
+    .social-metrics {
+        display: flex;
+        align-items: center;
+        position: relative;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center; }
+        .social-metrics.socialm-bg-1 {
+            background-image: url("http://thelaunch.co/img/social-metrics-bg-1.jpg"); }
+        .social-metrics.socialm-bg-2 {
+            background-image: url("http://thelaunch.co/img/social-metrics-bg-2.jpg"); }
+        .social-metrics.socialm-bg-3 {
+            background-image: url("http://thelaunch.co/img/social-metrics-bg-3.jpg"); }
+    .social-metrics:before {
+        content: '';
+        background: linear-gradient(90deg, #E71A24, #FFF);
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        opacity: .5; }
+        .social-metrics.socialm-bg-1:before {
+            width: 72%; }
+        .social-metrics.socialm-bg-2:before {
+            width: 95%; }
+        .social-metrics.socialm-bg-3:before {
+            width: 23%; }
+
+
+body.service.software .case-study-content-holder {
+    background: #FFF;
+    margin: 3em 2em 5em;
+    padding: 20px; }
+    body.service.software .case-study-content-holder img {
+        max-width: 50%;
+        margin-left: 20px;
+        margin-bottom: 20px; }
+    body.service.software .case-study-content-holder .button-close {
+        margin: 2em auto;
+        text-align: center; }
+        body.service.software .case-study-content-holder .button-close a {
+            font-size: 18px;
+            padding: .5em 2.5em;
+            border: 2px solid #e71a24;
+            color: #020000;
+            display: inline-block;
+            font-weight: 900; }
+
+section#WebPoints {
+    padding: 150px 0px; }
+    #WebPoints .col-md-6 {
+        margin-top: 3em; }
+        #WebPoints .col-md-6 img {
+        margin: 20px 0; }
+
+/*    06. Ready
+---------------------------------------------------------*/
+section#Ready {
+    padding: 25em 0;
+    z-index: 1;
+    color: #FFFFFF;
+    background: url('http://thelaunch.co/img/ready-bg.png') 50% 0 no-repeat;
+    background-size: cover; }
+    section#Ready a.ready-btn {
+        padding: 1em 3.5em;
+        font-size: 20px;
+        display: inline-block;
+        position: relative;
+        overflow: hidden;
+        color: #FFFFFF;
+        border: 1px solid #FFFFFF; }
+        section#Ready a.ready-btn:hover {
+            color: #E71A24; }
+        section#Ready a.ready-btn::after {
+            content: '';
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: #FFF;
+            z-index: -1;
+            transition: all 1s cubic-bezier(0, 1, 1, 1);
+            transform: translateX(-100%); }
+            section#Ready a.ready-btn:hover::after {
+                transform: none; }
+
+
+/*    07. Footer
+---------------------------------------------------------*/
+footer {
+    z-index: 4;
+    position: relative;
+    background: #020001; }
+    footer .footer-widgets {
+        padding: 60px 0;
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3); }
+        footer .footer-widgets ul.footer-menu {
+            padding: 0;
+            margin: 0; }
+            footer .footer-widgets ul.footer-menu li {
+                list-style: none; }
+                footer .footer-widgets ul.footer-menu li a {
+                    color: #FFF;
+                    font-size: 18px; }
+        footer .footer-widgets ul.footer-social-menu li {
+            display: inline-block; }
+            footer .footer-widgets ul.footer-social-menu li a {
+                color: #FFF;
+                padding: 1em 1em;
+                filter: brightness(0)invert(1); }
+    footer .copyright h6.small {
+        color: #858585;
+        padding: 1em 0;
+        letter-spacing: 0.06em; }
+
+
+
+/*    07. Particles
+---------------------------------------------------------*/
+.particles {
+    pointer-events: none;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    display: block;
+    z-index: -999;
+}
+.particles img {
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    opacity: .3;
+}
+.particles img.p1 {
+    height: 20px;
+    width: 20px;
+    left: 2%;
+    top: 10%;
+    animation: particle_anim_1 40s infinite alternate ease-in-out;
+}
+.particles img.p2 {
+    height: 50px;
+    width: 50px;
+    right: 2%;
+    bottom: 10%;
+    animation: particle_anim_2 30s infinite alternate ease-in-out;
+}
+.particles img.p3 {
+    height: 40px;
+    width: 40px;
+    left: 80%;
+    bottom: 80%;
+    animation: particle_anim_1 50s infinite alternate-reverse ease-in-out;
+}
+.particles img.p4 {
+    height: 250px;
+    width: 250px;
+    left: -10%;
+    top: 45%;
+    opacity: .05;
+    animation: particle_anim_3 10s infinite alternate-reverse ease-in-out;
+}
+.particles img.p5 {
+    height: 250px;
+    width: 250px;
+    right: -10%;
+    top: 45%;
+    opacity: .05;
+    animation: particle_anim_3 10s infinite alternate ease-in-out;
+}
+.particles img.p6 {
+    height: 200px;
+    width: 200px;
+    left: -5%;
+    top: 35%;
+    animation: particle_anim_3 15s infinite alternate ease-in-out;
+}
+.particles img.p7 {
+    height: 25px;
+    width: 25px;
+    left: 30%;
+    top: 45%;
+    animation: particle_anim_3 15s infinite alternate ease-in-out;
+}
+.particles img.p8 {
+    height: 30px;
+    width: 30px;
+    right: 10%;
+    top: 20%;
+    animation: particle_anim_1 50s infinite alternate ease-in-out;
+}
+.particles img.p9 {
+    height: 15px;
+    width: 15px;
+    left: 40%;
+    top: 30%;
+    animation: particle_anim_1 50s infinite ease-in-out;
+}
+.particles img.p10 {
+    height: 40px;
+    width: 40px;
+    left: 5%;
+    top: 80%;
+    animation: particle_anim_2 30s infinite alternate ease-in-out;
+}
+@keyframes particle_anim_1 {
+    0%   { transform: translate(0, 0) scale(1) rotate(0deg); }
+    50%  { transform: translate(50vw, 40vh) scale(2) rotate(-1800deg); }
+    100% { transform: translate(0, 80vh) scale(1) rotate(-3600deg); }
+}
+@keyframes particle_anim_2 {
+    0%   { transform: translate(0, 0) scale(1) rotate(0deg); }
+    100% { transform: translate(-40vw, -80vh) scale(1) rotate(360deg); }
+}
+@keyframes particle_anim_3 {
+    0%   { transform: translate(0, 0) scale(1) rotate(0deg); }
+    100% { transform: translate(30px, 50px) scale(1.1) rotate(40deg); }
+}
+
+
+.background {
+    pointer-events: none;
+    position: absolute;
+    display: flex;
+    align-items: flex-end;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 2; }
+    .background img {
+        width: 100%;
+        margin-bottom: -40px; }
