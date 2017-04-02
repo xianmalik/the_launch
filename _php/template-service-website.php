@@ -13,7 +13,7 @@
 
     <title>Service - Website Development | The Launch</title>
 
-    <!-- <link rel="shortcut icon" href="http://thelaunch.co/img/favicon.png" type="image/x-icon"> -->
+    <link rel="shortcut icon" href="http://thelaunch.co/img/favicon.png" type="image/x-icon">
 
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>

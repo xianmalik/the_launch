@@ -13,7 +13,7 @@
 
     <title>Service - SEO | The Launch</title>
 
-    <!-- <link rel="shortcut icon" href="http://thelaunch.co/img/favicon.png" type="image/x-icon"> -->
+    <link rel="shortcut icon" href="http://thelaunch.co/img/favicon.png" type="image/x-icon">
 
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -54,10 +54,7 @@
 
         <div id="Slider">
             <div class="slider-left">
-                <div class="wrap">
-                    <h6>SERVICE</h6>
-                    <h1>&nbsp;SEO</h1>
-                </div>
+                <img src="http://thelaunch.co/img/seo-image.png">
             </div>
             <div class="slider-right">
                 <h1 class="slider-h">

@@ -13,7 +13,7 @@
 
     <title>Service - Software Development | The Launch</title>
 
-    <!-- <link rel="shortcut icon" href="http://thelaunch.co/img/favicon.png" type="image/x-icon"> -->
+    <link rel="shortcut icon" href="http://thelaunch.co/img/favicon.png" type="image/x-icon">
 
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -187,25 +187,25 @@
                     <div class="col-md-12">
                         <div class="owl-carousel owl-theme">
                             <div class="text-center">
-                                <img src="http://thelaunch.co/img/case-study-1.png">
+                                <img src="http://thelaunch.co/img/case-study-2.png">
                                 <h6 class="strong">Go-Rilla, Case Study <br>
                                 cillum dolore eu fugiat nulla pariat</h6>
                                 <h6>John Doe, CEO of Nor Corp.</h6>
                                 <a href="#" class="btn-default" data-study="study_1">Show Study</a>
                             </div>
                             <div class="text-center">
-                                <img src="http://thelaunch.co/img/case-study-2.png">
-                                <h6 class="strong">Go-Rilla, Case Study <br>
+                                <img src="http://thelaunch.co/img/case-study-1.png">
+                                <h6 class="strong">mYOUsic, Case Study <br>
                                 cillum dolore eu fugiat nulla pariat</h6>
                                 <h6>John Doe, CEO of Nor Corp.</h6>
                                 <a href="#" class="btn-default" data-study="study_2">Show Study</a>
                             </div>
                             <div class="text-center">
                                 <img src="http://thelaunch.co/img/case-study-3.png">
-                                <h6 class="strong">Go-Rilla, Case Study <br>
+                                <h6 class="strong">Unveil, Case Study <br>
                                 cillum dolore eu fugiat nulla pariat</h6>
                                 <h6>John Doe, CEO of Nor Corp.</h6>
-                                <a href="#" class="btn-default" data-study="study_2">Show Study</a>
+                                <a href="#" class="btn-default" data-study="study_3">Show Study</a>
                             </div>
                         </div>
                         <div class="case-study-content-holder">
@@ -213,27 +213,27 @@
                                 <h6 class="strong">Go-Rilla</h6>
                                 <p>
                                 <img src="http://thelaunch.co/img/case-study-desc.png" class="right">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                    The Team over at Go-Rilla approached The Launch for their software needs. Go-Rilla is an event management software that anebales users to manage and promote their events. The team had an excellent idea but didn't know how to test it with customers, get feedback to enhance the product or execute on the programming of their software. The Launch immediately built them a prototype of their app to test with users, and within a few weeks, they had some real world feedback. The Launch designed the changes into the code and built a beatufiul interface that Go-Rilla could be proud to show off. Go-Rilla is currently in beta testing phase with some pretty large companies from around the Twin Cities (Red Cow, Fulton Brewery, Happy Gnome Restaurants). We are excited to work with this amazing startup moving forward for SEO and Social media. It's really exciting watching your work come full circle.
                                 </p>
                                 <div class="button-close">
                                     <a href="#">Close</a>
                                 </div>
                             </div>
                             <div class="case-study-content" id="study_2">
-                                <h6 class="strong">Go-Rilla</h6>
+                                <h6 class="strong">mYOUsic</h6>
                                 <p>
                                 <img src="http://thelaunch.co/img/case-study-desc.png" class="right">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                    mYOUsis is a really cool projec that The Launch is really excited to be apart of. mYOUsic enables independent artists to market themselves better in the virtual world. In a nutshell mYOUsic enables an artist to create a website on the fly, store & distfibute music/videos, schedule social media marketing posts and gather analtyics to enhance thier reach. The Launch helped music set themselves up for success. We built a quick prototype they could test with customers and potential investors. They are currently out to raise a round of funding and have twenty artists beta testing the platform with the help of The Launch. mYOUsic is exactly why we built the software department at The launch. It's really exciting to see entreprenuers turn their ideas into reality and when they have success, it feels like we are.
                                 </p>
                                 <div class="button-close">
                                     <a href="#">Close</a>
                                 </div>
                             </div>
                             <div class="case-study-content" id="study_3">
-                                <h6 class="strong">Go-Rilla</h6>
+                                <h6 class="strong">Unveil</h6>
                                 <p>
                                 <img src="http://thelaunch.co/img/case-study-desc.png" class="right">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                    The Launch teamed up with Fibo Studios out of Portland in order to help Unveil. Unveil is a community based mobile app that enables it's users to connect with one another and discover things that otherwise wouldn't have been talked about. They are testing the app for all intensive dating purposes but are also interested in seeing how they can connect and nurcher relationships between friends. They have some really bold ideas that are also currently in development and we are excited to see how The Launch can help them exicute. The Launch helped Unveil with some of it's branding, built a strong beta testing list, and developed the Unveil website. Unveil will be availble in the app store within the next few months and we couldn't be more excited, this prodcut is unlike anything you have ever seen.
                                 </p>
                                 <div class="button-close">
                                     <a href="#">Close</a>

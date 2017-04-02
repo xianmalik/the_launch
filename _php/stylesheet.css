@@ -554,6 +554,26 @@ section#WebPoints {
         margin-top: 3em; }
         #WebPoints .col-md-6 img {
         margin: 20px 0; }
+        #WebPoints .row .col-md-6::before {
+            position: absolute;
+            top: -20px;
+            left: -17%; }
+        #WebPoints .row .col-md-6:first-child::before {
+            content: url('http://thelaunch.co/img/1.png'); }
+        #WebPoints .row .col-md-6:nth-child(2)::before {
+            content: url('http://thelaunch.co/img/2.png'); }
+        #WebPoints .row .col-md-6:last-child::before {
+            content: url('http://thelaunch.co/img/3.png'); }
+        #WebPoints .row .col-md-6:first-child::after {
+            content: url('http://thelaunch.co/img/line_1.png');
+            position: absolute;
+            top: 60%;
+            left: 10%; }
+        #WebPoints .row .col-md-6:nth-child(2)::after {
+            content: url('http://thelaunch.co/img/line_2.png');
+            position: absolute;
+            top: 100%;
+            right: 110%; }
 
 /*    06. Ready
 ---------------------------------------------------------*/

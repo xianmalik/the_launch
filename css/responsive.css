@@ -163,3 +163,5 @@ body.service #Approach .col-md-2 img:last-child {
 .footer-social-menu a img {
     width: 15px;
     height: 15px; }
+#WebPoints .row .col-md-6::after {
+    display: none; }
