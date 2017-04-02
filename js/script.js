@@ -49,4 +49,8 @@ jQuery(document).ready(function($){
         e.preventDefault();
         $(this).parent().slideUp();
     });
+    $("section#Ready a.ready-btn, .subscribe-form .sf-close-btn").click(function(e){
+        e.preventDefault();
+        $(".subscribe-form").toggleClass("active");
+    });
 });

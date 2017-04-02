@@ -771,3 +771,75 @@ footer {
             transform: translateX(-101%); }
         .owl-item.center .btn-default:hover::before {
             transform: translateX(0); }
+
+
+.subscribe-form {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 100%;
+    z-index: 99;
+    background: #FFF;
+    width: 100%;
+    height: 100%;
+    transition: all .5s .5s ease-out; }
+    .subscribe-form.active {
+        transition-delay: 0s;
+        left: 0; }
+    .subscribe-form .wrap {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        padding: 15% 0; }
+        .subscribe-form .wrap::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: #FFF;
+            top: 0;
+            left: 0;
+            transition: all .5s ease-out; }
+            .subscribe-form.active .wrap::after {
+                transition-delay: .5s;
+                left: 100%; }
+        .subscribe-form .sf-close-btn {
+            font-family: serif;
+            font-size: 50px;
+            line-height: 1em;
+            display: block;
+            position: absolute;
+            top: 1em;
+            right: 1em;
+            width: 1em;
+            height: 1em;
+            cursor: pointer; }
+        .subscribe-form h3 {
+            margin: 0 0 .5em; }
+        .subscribe-form input {
+            font-family: 'Roboto Slab', serif; }
+            .subscribe-form ::-webkit-input-placeholder {
+                font-family: 'Roboto Slab', serif;
+                font-weight: 700;
+                opacity: .6; }
+            .subscribe-form input:focus {
+                outline: none; }
+            .subscribe-form input[type="email"],
+            .subscribe-form input[type="text"],
+            .subscribe-form input[type="tel"] {
+                background: transparent;
+                border: 0;
+                border-bottom: 1px solid #000;
+                margin: 0 0 20px;
+                padding: .8em 0;
+                display: block;
+                width: 100%; }
+            .subscribe-form input[type="submit"] {
+                font-weight: 400;
+                color: #FFF;
+                background: #E71A24;
+                font-size: 16px;
+                padding: 1em 2.6em;
+                margin: 2em 0 0;
+                border: 0px transparent; }
