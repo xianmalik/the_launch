@@ -117,7 +117,7 @@ section#KeyPoints .key-point {
     display: block;
     position: relative;
     color: #000;
-    margin: 30px auto !important; }
+    margin: 70px auto !important; }
     section#KeyPoints .key-point .wrap {
         padding: 0 !important; }
         section#KeyPoints .key-point:before {
@@ -127,7 +127,7 @@ section#ReImagine {
     background-size: 150%;
     background-position: left top;
     text-align: center;
-    padding: 400px 0 0; }
+    padding: 150vw 0 0; }
     section#ReImagine br { display: none; }
     #CEO img {
         width: 100%;
