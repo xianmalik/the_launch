@@ -194,16 +194,16 @@
             <div class="row footer-widgets">
                 <div class="col-md-3">
                     <ul class="footer-menu">
-                        <li><a href="#">SEO</a></li>
-                        <li><a href="#">Social Media</a></li>
-                        <li><a href="#">Website Design & Development</a></li>
+                        <li><a href="http://thelaunch.co/service-seo">SEO</a></li>
+                        <li><a href="http://thelaunch.co/service-social">Social Media</a></li>
+                        <li><a href="http://thelaunch.co/service-website">Website Design & Development</a></li>
                     </ul>
                 </div>
                 <div class="col-md-3">
                     <ul class="footer-menu">
-                        <li><a href="#">Software Development</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="http://thelaunch.co/service-software">Software Development</a></li>
+                        <li><a href="http://thelaunch.co/blog">Blog</a></li>
+                        <li><a class="contact-btn" href="#">Contact</a></li>
                     </ul>
                 </div>
                 <div class="col-md-6 text-right">

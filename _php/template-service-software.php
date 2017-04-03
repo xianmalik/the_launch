@@ -212,7 +212,6 @@
                             <div class="case-study-content" id="study_1">
                                 <h6 class="strong">Go-Rilla</h6>
                                 <p>
-                                <img src="http://thelaunch.co/img/case-study-desc.png" class="right">
                                     The Team over at Go-Rilla approached The Launch for their software needs. Go-Rilla is an event management software that anebales users to manage and promote their events. The team had an excellent idea but didn't know how to test it with customers, get feedback to enhance the product or execute on the programming of their software. The Launch immediately built them a prototype of their app to test with users, and within a few weeks, they had some real world feedback. The Launch designed the changes into the code and built a beatufiul interface that Go-Rilla could be proud to show off. Go-Rilla is currently in beta testing phase with some pretty large companies from around the Twin Cities (Red Cow, Fulton Brewery, Happy Gnome Restaurants). We are excited to work with this amazing startup moving forward for SEO and Social media. It's really exciting watching your work come full circle.
                                 </p>
                                 <div class="button-close">
@@ -222,7 +221,6 @@
                             <div class="case-study-content" id="study_2">
                                 <h6 class="strong">mYOUsic</h6>
                                 <p>
-                                <img src="http://thelaunch.co/img/case-study-desc.png" class="right">
                                     mYOUsis is a really cool projec that The Launch is really excited to be apart of. mYOUsic enables independent artists to market themselves better in the virtual world. In a nutshell mYOUsic enables an artist to create a website on the fly, store & distfibute music/videos, schedule social media marketing posts and gather analtyics to enhance thier reach. The Launch helped music set themselves up for success. We built a quick prototype they could test with customers and potential investors. They are currently out to raise a round of funding and have twenty artists beta testing the platform with the help of The Launch. mYOUsic is exactly why we built the software department at The launch. It's really exciting to see entreprenuers turn their ideas into reality and when they have success, it feels like we are.
                                 </p>
                                 <div class="button-close">
@@ -232,7 +230,6 @@
                             <div class="case-study-content" id="study_3">
                                 <h6 class="strong">Unveil</h6>
                                 <p>
-                                <img src="http://thelaunch.co/img/case-study-desc.png" class="right">
                                     The Launch teamed up with Fibo Studios out of Portland in order to help Unveil. Unveil is a community based mobile app that enables it's users to connect with one another and discover things that otherwise wouldn't have been talked about. They are testing the app for all intensive dating purposes but are also interested in seeing how they can connect and nurcher relationships between friends. They have some really bold ideas that are also currently in development and we are excited to see how The Launch can help them exicute. The Launch helped Unveil with some of it's branding, built a strong beta testing list, and developed the Unveil website. Unveil will be availble in the app store within the next few months and we couldn't be more excited, this prodcut is unlike anything you have ever seen.
                                 </p>
                                 <div class="button-close">
@@ -262,16 +259,16 @@
             <div class="row footer-widgets">
                 <div class="col-md-3">
                     <ul class="footer-menu">
-                        <li><a href="#">SEO</a></li>
-                        <li><a href="#">Social Media</a></li>
-                        <li><a href="#">Website Design & Development</a></li>
+                        <li><a href="http://thelaunch.co/service-seo">SEO</a></li>
+                        <li><a href="http://thelaunch.co/service-social">Social Media</a></li>
+                        <li><a href="http://thelaunch.co/service-website">Website Design & Development</a></li>
                     </ul>
                 </div>
                 <div class="col-md-3">
                     <ul class="footer-menu">
-                        <li><a href="#">Software Development</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="http://thelaunch.co/service-software">Software Development</a></li>
+                        <li><a href="http://thelaunch.co/blog">Blog</a></li>
+                        <li><a class="contact-btn" href="#">Contact</a></li>
                     </ul>
                 </div>
                 <div class="col-md-6 text-right">
